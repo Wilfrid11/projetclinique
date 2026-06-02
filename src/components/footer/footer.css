@@ -1,0 +1,82 @@
+.pied-de-page {
+  background-color: #ffffff;
+  border-top: 1px solid #e2e8f0;
+  padding-top: 60px;
+}
+
+.conteneur-footer {
+  width: 1200px;
+  margin: 0px auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 80px;
+  padding: 0px 20px 40px;
+}
+
+.footer-titre {
+  font-size: 16px;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 20px;
+}
+
+.footer-liens {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-liens a {
+  text-decoration: none;
+  color: #64748b;
+  font-size: 14px;
+  transition: color 200ms;
+}
+
+.footer-liens a:hover {
+  color: #0056b3;
+}
+
+.footer-texte, .footer-adresse, .footer-contact-info {
+  font-size: 14px;
+  color: #64748b;
+  line-height: 22px;
+  margin-bottom: 15px;
+}
+
+.urgence-texte {
+  color: #0056b3;
+  font-weight: 600;
+}
+
+.footer-bas {
+  border-top: 1px solid #f1f5f9;
+  padding: 25px 0px;
+  background-color: #f8fafc;
+}
+
+.conteneur-footer-bas {
+  width: 1200px;
+  margin: 0px auto;
+  padding: 0px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.copyright-texte {
+  font-size: 13px;
+  color: #94a3b8;
+  margin: 0px;
+}
+
+.liens-legaux {
+  display: flex;
+  gap: 20px;
+}
+
+.liens-legaux a {
+  font-size: 13px;
+  color: #94a3b8;
+  text-decoration: none;
+}

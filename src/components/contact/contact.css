@@ -1,0 +1,114 @@
+.section-contact {
+  padding: 60px 0px;
+  background-color: #f8fafc;
+}
+
+.conteneur-contact {
+  width: 1200px;
+  margin: 0px auto;
+}
+
+.bloc-rendez-vous {
+  display: grid;
+  grid-template-columns: 480px 1fr;
+  background-color: #ffffff;
+  border-radius: 32px;
+  overflow: hidden;
+  box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.05);
+}
+
+/* --- GAUCHE : FORMULAIRE --- */
+.formulaire-rdv {
+  padding: 60px;
+}
+
+.titre-form {
+  font-size: 24px;
+  font-weight: 700;
+  color: #004a99;
+  margin-bottom: 32px;
+}
+
+.groupe-input {
+  margin-bottom: 20px;
+}
+
+.groupe-input label {
+  display: block;
+  font-size: 13px;
+  color: #64748b;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.select-custom, .input-custom {
+  width: 100%;
+  padding: 14px 16px;
+  background-color: #f1f5f9;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  font-size: 14px;
+  color: #1e293b;
+}
+
+.ligne-double {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.bouton-bleu {
+  width: 100%;
+  padding: 16px;
+  background-color: #0056b3;
+  color: #ffffff;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background 0.3s;
+}
+
+.note-securite {
+  font-size: 12px;
+  color: #94a3b8;
+  text-align: center;
+  margin-top: 16px;
+}
+
+/* --- DROITE : VISUEL CARTE --- */
+.carte-visuelle {
+  background-color: #3b8a8a; /* Couleur de base teal de l'image */
+  background-image: url('../../assets/icone-carte.avif'); /* Exemple de motif map */
+  background-size: 700px;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  padding: 40px;
+}
+
+.badge-infos {
+  background-color: rgba(204, 205, 209, 0.95);
+  backdrop-filter: blur(10px);
+  padding: 30px;
+  border-radius: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.info-ligne {
+  display: flex;
+  gap: 15px;
+  font-size: 14px;
+  color: #475569;
+  line-height: 20px;
+}
+
+.icone-info {
+  font-size: 18px;
+}

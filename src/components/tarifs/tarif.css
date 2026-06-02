@@ -1,0 +1,170 @@
+/* --- SECTION GÉNÉRALE --- */
+.section-tarifs {
+  padding: 100px 0px;
+  background-color: #f8fafc;
+  font-family: 'Inter', sans-serif;
+}
+
+.conteneur-tarifs {
+  width: 1200px;
+  margin: 0px auto;
+  padding: 0px 20px;
+}
+
+.titre-principal-tarifs {
+  font-size: 48px;
+  font-weight: 700;
+  color: #1a1a1a;
+  text-align: center;
+  margin: 0px 0px 16px 0px;
+}
+
+.sous-titre-tarifs {
+  font-size: 16px;
+  color: #64748b;
+  text-align: center;
+  margin: 0px auto 60px auto;
+  max-width: 650px;
+  line-height: 24px;
+}
+
+/* --- GRILLE --- */
+.grille-cartes-tarifs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  /* Aligne les cartes sur leur axe central horizontal */
+  align-items: center; 
+}
+
+/* --- STYLE COMMUN AUX CARTES --- */
+.carte-tarif-blanche, .carte-tarif-bleue {
+  border-radius: 32px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+/* --- CARTES LATÉRALES (BLANCHES) --- */
+.carte-tarif-blanche {
+  background-color: #ffffff;
+  padding: 40px 35px;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.02);
+  border: 1px solid #e2e8f0;
+  height: 480px; /* Hauteur fixe pour l'uniformité */
+}
+
+/* --- CARTE CENTRALE (BLEUE) --- */
+.carte-tarif-bleue {
+  background-color: #0056b3;
+  padding: 60px 35px;
+  color: #ffffff;
+  box-shadow: 0px 20px 40px rgba(0, 86, 179, 0.25);
+  height: 560px; /* Plus haute que les blanches */
+  z-index: 10;
+  transform: scale(1.02); /* Très léger zoom pour l'effet premium */
+}
+
+/* --- ÉLÉMENTS INTÉRIEURS --- */
+.nom-consultation, .nom-consultation-blanche {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.nom-consultation { color: #1a1a1a; }
+
+.bloc-prix, .bloc-prix-blanc {
+  margin-bottom: 25px;
+}
+
+.montant, .montant-blanc {
+  font-size: 34px;
+  font-weight: 800;
+}
+
+.montant { color: #1a1a1a; }
+
+.unite, .unite-blanche {
+  font-size: 14px;
+  margin-left: 5px;
+  color: #64748b;
+}
+
+.unite-blanche { color: rgba(255, 255, 255, 0.8); }
+
+.badge-populaire {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+/* --- LISTES --- */
+.liste-services-tarifs, .liste-services-tarifs-blanche {
+  list-style: none;
+  padding: 0px;
+  margin: 0px 0px 30px 0px;
+  flex-grow: 1; /* Pousse le bouton vers le bas */
+}
+
+.liste-services-tarifs li, .liste-services-tarifs-blanche li {
+  font-size: 14px;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* --- BOUTONS (LIENS) --- */
+.bouton-action-tarif, .bouton-action-tarif-blanc {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  padding: 16px;
+  border-radius: 14px;
+  font-size: 15px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.bouton-action-tarif {
+  border: 1px solid #0056b3;
+  color: #0056b3;
+  background: transparent;
+}
+
+.bouton-action-tarif:hover {
+  background-color: #0056b3;
+  color: #ffffff;
+}
+
+.bouton-action-tarif-blanc {
+  background-color: #ffffff;
+  color: #0056b3;
+}
+
+.bouton-action-tarif-blanc:hover {
+  background-color: #f8fafc;
+  transform: translateY(-3px);
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 1024px) {
+  .conteneur-tarifs { width: 100%; padding: 0px 20px; }
+  .grille-cartes-tarifs { 
+    grid-template-columns: 1fr; 
+    align-items: stretch;
+    max-width: 450px;
+    margin: 0px auto;
+  }
+  .carte-tarif-blanche, .carte-tarif-bleue { 
+    height: auto; 
+    transform: none; 
+  }
+}

@@ -1,0 +1,138 @@
+.services {
+  padding: 80px 0px;
+  background-color: #eef7ff; 
+}
+
+.services__header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.services__main-title {
+  font-size: 40px; /* Conversion de 2.5rem */
+  color: #1a1a1a;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.services__subtitle {
+  color: #666666;
+  max-width: 600px;
+  margin: 0px auto;
+  line-height: 26px; /* Conversion de 1.6 */
+}
+
+/* GRILLE : 4 colonnes */
+.services__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* CARTE STANDARD */
+.service-card {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.service-card__icon {
+  width: 45px;
+  height: 45px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  font-size: 20px; /* Conversion de 1.2rem */
+}
+
+/* Couleurs des icônes */
+.icon-blue { background: #e0f2fe; }
+.icon-orange { background: #ffedd5; }
+.icon-purple { background: #f3e8ff; }
+.icon-darkblue { background: #e0e7ff; }
+.icon-green { background: #dcfce7; }
+.icon-softorange { background: #fff7ed; }
+
+.service-card__title {
+  font-size: 18px; /* Conversion de 1.15rem */
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 12px;
+}
+
+.service-card__desc {
+  font-size: 14px; /* Conversion de 0.9rem */
+  color: #666666;
+  line-height: 22px; /* Conversion de 1.5 */
+  margin-bottom: 20px;
+}
+
+.service-card__tag {
+  font-size: 10px; /* Conversion de 0.65rem */
+  font-weight: 700;
+  color: #999999;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-top: auto;
+}
+
+/* CARTE URGENCE (BLEUE) */
+.service-card--featured {
+  grid-column: span 2; 
+  background: linear-gradient(to right, #0056b3, #003d7e);
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+  
+}
+
+.featured__title {
+  font-size: 26px; /* Conversion de 1.6rem */
+  margin-bottom: 15px;
+}
+
+.featured__desc {
+  font-size: 15px; /* Conversion de 0.95rem */
+  opacity: 0.9;
+  margin-bottom: 25px;
+  max-width: 300px;
+}
+
+.featured__btn {
+  background: #ffffff;
+  color: #0056b3;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .services__grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 600px) {
+  .services__grid { grid-template-columns: 1fr; }
+  .service-card--featured { grid-column: span 1; }
+}
+/* Force la police sur TOUS les éléments */
+*, *::before, *::after {
+  font-family: 'Inter', sans-serif;
+  box-sizing: border-box;
+}
+
+/* Force la police spécifique sur TOUS les titres du site */
+h1, h2, h3, h4, h5, h6, .titre-hero, .titre-principal-tarifs {
+  font-family: 'Montserrat', sans-serif !important;
+  }

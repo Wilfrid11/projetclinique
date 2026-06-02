@@ -1,0 +1,126 @@
+/* --- SECTION TÉMOIGNAGES --- */
+.section-temoignages {
+  padding: 80px 0px;
+  background-color: #f1f5f9; /* Fond bleu/gris très clair */
+}
+
+.conteneur-global {
+  max-width: 1200px;
+  margin: 0px auto;
+  padding: 0px 20px;
+}
+
+/* --- ENTETE (Titre + Navigation) --- */
+.entete-temoignages {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 50px;
+}
+
+.titre-temoignages {
+  font-size: 36px; /* */
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 12px;
+  margin-top: 0px;
+}
+
+.sous-titre-temoignages {
+  font-size: 16px;
+  color: #64748b;
+  max-width: 500px;
+  line-height: 24px;
+  margin: 0px;
+}
+
+/* --- NAVIGATION (Boutons Circulaires) --- */
+.navigation-temoignages {
+  display: flex;
+  gap: 12px;
+}
+
+.bouton-nav {
+  width: 44px;
+  height: 44px;
+  border-radius: 22px; /* Forme circulaire parfaite */
+  border: 1px solid #e2e8f0;
+  background-color: #ffffff;
+  color: #1a1a1a;
+  font-size: 22px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 200ms ease;
+}
+
+.bouton-nav:hover:not(:disabled) {
+  background-color: #f8fafc;
+  border-color: #cbd5e1;
+}
+
+.bouton-nav:disabled {
+  opacity: 40%;
+  cursor: not-allowed;
+}
+
+/* --- GRILLE ET CARTES --- */
+.grille-temoignages {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 colonnes comme sur l'image */
+  gap: 24px;
+}
+
+.carte-temoignage {
+  background-color: #ffffff;
+  padding: 35px;
+  border-radius: 24px; /* Coins très arrondis */
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.02);
+}
+
+.utilisateur-temoignage {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.avatar-utilisateur {
+  width: 48px;
+  height: 48px;
+  border-radius: 24px;
+  object-fit: cover;
+  background-color: #e2e8f0;
+}
+
+.nom-utilisateur {
+  font-size: 16px;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+.texte-temoignage {
+  font-size: 15px;
+  color: #64748b;
+  line-height: 24px;
+  font-style: italic; /* Style pour les citations */
+  margin: 0px;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 992px) {
+  .grille-temoignages {
+    grid-template-columns: 1fr;
+  }
+  
+  .entete-temoignages {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  
+  .conteneur-global {
+    padding: 0px 15px;
+  }
+}

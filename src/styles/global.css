@@ -1,0 +1,109 @@
+/* 📁 src/styles/global.css — Variables CSS globales, reset, et espacements aérés */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap');
+/* Importation de Montserrat et Inter depuis Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Inter:wght@400;500;600&display=swap');
+:root {
+  /* Couleurs */
+  --clr-primary:         #0d2d5e;
+  --clr-primary-light:   #1a4080;
+  --clr-accent:          #2ec4b6;
+  --clr-accent-dark:     #22a99d;
+  --clr-accent-blue:     #3b82f6;
+  --clr-accent-blue-dark: #2563eb;
+  --clr-white:           #ffffff;
+  --clr-bg:              #f8fafc;
+  --clr-bg-section:      #eef2f7;
+  --clr-text:            #1e293b;
+  --clr-text-muted:      #64748b;
+  --clr-border:          #e2e8f0;
+
+  /* Typographie */
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-body:    'DM Sans', sans-serif;
+
+  /* Espacements */
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+
+  --transition: 0.3s ease;
+}
+
+/* Reset de base */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html  { scroll-behavior: smooth; }
+body  { 
+  font-family: var(--font-body); 
+  color: var(--clr-text); 
+  background: var(--clr-white); 
+  line-height: 1.6; 
+  -webkit-font-smoothing: antialiased; 
+}
+
+/* --- STRUCTURE ET ESPACEMENT (CORRIGÉ) --- */
+
+/* On augmente les marges latérales : mini 2rem, idéalement 12% de l'écran, max 15rem */
+.container { 
+  max-width: 1440px; 
+  margin: 0 auto; 
+  padding: 0 clamp(2rem, 12vw, 15rem); 
+}
+
+/* On augmente l'espace entre les sections pour plus de clarté */
+.section { 
+  padding: clamp(5rem, 10vw, 12rem) 0; 
+}
+
+/* --- ÉLÉMENTS DE TITRAGE --- */
+
+.section-label {
+  display: inline-block;
+  font-size: 0.75rem; 
+  font-weight: 600;
+  letter-spacing: 0.15em; 
+  text-transform: uppercase;
+  color: var(--clr-accent); 
+  margin-bottom: 1.5rem;
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-weight: 700; 
+  color: var(--clr-primary);
+  line-height: 1.1; 
+  margin-bottom: 1.5rem;
+}
+
+.section-subtitle {
+  font-size: 1.1rem; 
+  color: var(--clr-text-muted);
+  max-width: 600px; 
+  line-height: 1.8;
+  margin-bottom: 3rem;
+}
+
+/* --- BOUTONS --- */
+
+.btn-primary {
+  display: inline-flex; 
+  align-items: center; 
+  gap: .5rem; 
+  color: white;
+  padding: 1rem 2rem; /* Boutons plus généreux */
+  border-radius: 10px;
+  font-size: 1rem; 
+  font-weight: 600;
+  transition: all var(--transition);
+}
+
+.btn-primary:hover {
+  background: var(--clr-accent-blue-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(9, 78, 190, 0.4);
+}
+
+/* Animations */
+@keyframes fadeUp { from { opacity:0; transform:translateY(30px); } to { opacity:1; transform:translateY(0); } }
+.animate-fadeUp { animation: fadeUp .8s ease-out both; }

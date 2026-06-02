@@ -1,0 +1,145 @@
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 700px;
+  /* L'image s'affiche ici. On met l'image d'abord, puis le dégradé */
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.9) 30%, rgba(255, 255, 255, 0.2) 100%), 
+              url('../../assets/hospital.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.hero-conteneur {
+  width: 1200px;
+  margin: 0px auto;
+  padding: 0px 20px;
+  position: relative;
+  z-index: 10;
+}
+
+.hero-interieur {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hero-contenu {
+  max-width: 620px;
+}
+
+.hero-titre {
+  font-size: 60px;
+  font-weight: 700;
+  color: #0f172a;
+  line-height: 72px;
+  margin-bottom: 24px;
+}
+
+.hero-titre-bleu {
+  color: #0056b3;
+}
+
+.hero-description {
+  font-size: 18px;
+  color: #475569;
+  line-height: 28px;
+  margin-bottom: 40px;
+}
+
+.hero-boutons {
+  display: flex;
+  gap: 16px;
+}
+
+/* --- BOUTONS --- */
+.bouton-rdv {
+  background-color: #0056b3;
+  color: #ffffff;
+  padding: 16px 32px;
+  border-radius: 12px;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.bouton-contact {
+  background-color: #ffffff;
+  color: #1e293b;
+  padding: 16px 32px;
+  border-radius: 12px;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 15px;
+  border: 1px solid #e2e8f0;
+}
+
+/* --- LE BADGE (FROSTED GLASS) --- */
+.hero-visuel {
+  position: relative;
+  height: 400px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.badge-flotte {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  padding: 16px 24px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+  animation: flottement 3s ease-in-out infinite;
+}
+
+.badge-icone {
+  width: 40px;
+  height: 40px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+}
+
+.badge-label {
+  display: block;
+  font-size: 10px;
+  font-weight: 800;
+  color: #64748b;
+  letter-spacing: 1px;
+}
+
+.badge-titre {
+  font-size: 15px;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0px;
+}
+
+/* Animation pour rendre le badge vivant */
+@keyframes flottement {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0px); }
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 992px) {
+  .hero-section {
+    background: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), 
+                url('../../assets/hospital.jpg');
+    text-align: center;
+  }
+  .hero-interieur { flex-direction: column; }
+  .hero-boutons { justify-content: center; }
+  .hero-visuel { display: none; } /* On cache le badge sur petit mobile pour la clarté */
+}
